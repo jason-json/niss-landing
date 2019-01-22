@@ -1,9 +1,17 @@
-import React from 'react';
+import React from "react";
+import Nav from "../components/Nav";
 
-const Layout = () => {
+const Layout = props => {
   return (
-    <div>
-      
+    <div className="main">
+      <Nav
+        currentCarId={props.currentCarId}
+        prevCarId={props.prevCarId}
+        nextCarId={props.nextCarId}
+        onClickPrev={props.onClickPrev}
+        onClickNext={props.onClickNext}
+      />
+      {props.children}
     </div>
   );
 };

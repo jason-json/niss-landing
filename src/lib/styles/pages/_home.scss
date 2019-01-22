@@ -1,0 +1,172 @@
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+
+    @include respond(tab-port) {
+        padding: 20rem 0;
+    }
+}
+
+// .section-features {
+//     padding: 20rem 0;
+//     background-image: linear-gradient(
+//         to right bottom,
+//         rgba($color-primary-light, 0.8),
+//         rgba($color-primary-dark, 0.8)),
+//     url(../img/nat-4.jpg);
+//     background-size: cover;
+//     transform: skewY(-7deg);
+//     margin-top: -10rem;
+
+//     & > * {
+//         transform: skewY(7deg);
+//     }
+
+//     @include respond(tab-port) {
+//         padding: 10rem 0;
+//     }
+
+// }
+
+.section-services {
+    background-color: $color-grey-light-1;
+    padding: 25rem 0 15rem 0;
+    margin-top: -10rem;
+
+    @include respond(tab-port) {
+        padding: 20rem 0 10rem 0;
+    }
+}
+
+.section-stories {
+    position: relative;
+    padding: 15rem 0;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+// .book {
+//     background-image: linear-gradient(105deg, 
+//                                     rgba($color-white, .9) 0%,
+//                                     rgba($color-white, .9) 50%,
+//                                     transparent 50%) ,
+//                             url(../img/nat-10.jpg);
+//     background-size: 100%;
+//     border-radius: 3px;
+//     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+//     @include respond(tab-land) {
+//         background-image: linear-gradient(105deg, 
+//         rgba($color-white, .9) 0%,
+//         rgba($color-white, .9) 65%,
+//         transparent 65%) ,
+// url(../img/nat-10.jpg);
+//         background-size: cover;
+//     }
+
+//     @include respond(tab-port) {
+//         background-image: linear-gradient(to right, 
+//         rgba($color-white, .9) 0%,
+//         rgba($color-white, .9) 100%),
+// url(../img/nat-10.jpg);
+//     }
+
+//     &__form {
+//         width: 50%;
+//         padding: 6rem;
+
+//         @include respond(tab-land) {
+//             width: 65%;
+//         }
+
+//         @include respond(tab-port) {
+//             width: 100%;
+//         }
+//     }
+// }
+
+.container-loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 3000;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.98),
+      rgba($color-primary-dark, 0.98));
+  }
+
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+
+.column {
+	flex: 1;
+	border: 1px solid gray;
+	margin: 2px;
+	padding: 10px;
+	&:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; }
+	
+}
+
+@media screen and (max-width: 980px) {
+  .columns .column {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+		&:nth-last-child(2) {
+			margin-right: 0;
+		}
+		&:last-child {
+			flex-basis: 100%;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.columns .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+}
+
+.section-mision{
+    background-color: $color-grey-light-1;
+    .icon-wrap{
+        width: 100%;
+        .icon{
+            justify-content: center;
+            height: 15rem;
+            &:hover{
+                -webkit-transform:scale(1.25); /* Safari and Chrome */
+                -moz-transform:scale(1.25); /* Firefox */
+                -ms-transform:scale(1.25); /* IE 9 */
+                -o-transform:scale(1.25); /* Opera */
+                transform:scale(1.25);
+                transition: all 0.5s ease-out;
+            }
+        }
+    }
+    p{
+        font-size: $default-font-size;
+    }
+}

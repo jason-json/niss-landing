@@ -1,0 +1,223 @@
+[
+  {
+    "id":0,
+    "title":"KICKS",
+    "slug":"/kicks",
+    "vesions":[
+      {
+        "id":0,
+        "model":" KICKSLUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":1,
+        "model":" KICKS LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":2,
+        "model":"KICKS  LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":3,
+        "model":"KICKS LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":4,
+        "model":"KICKS LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      }
+
+    ],
+    "images":[
+      {
+        "id":0,
+        "path":""    
+      },
+      {
+        "id":1,
+        "path":""    
+      },
+      {
+        "id":2,
+        "path":""    
+      },
+      {
+        "id":3,
+        "path":""    
+      },
+      {
+        "id":4,
+        "path":""    
+      },
+      {
+        "id":5,
+        "path":""    
+      }
+    ]
+  
+  },
+  {
+    "id":1,
+    "title":"qashqai",
+    "slug":"/qashqai",
+    "vesions":[
+      {
+        "id":0,
+        "model":" LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":1,
+        "model":" LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":2,
+        "model":" LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":3,
+        "model":" LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":4,
+        "model":" LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      }
+
+    ],
+    "images":[
+      {
+        "id":0,
+        "path":""    
+      },
+      {
+        "id":1,
+        "path":""    
+      },
+      {
+        "id":2,
+        "path":""    
+      },
+      {
+        "id":3,
+        "path":""    
+      },
+      {
+        "id":4,
+        "path":""    
+      },
+      {
+        "id":5,
+        "path":""    
+      }
+    ]
+  
+  },
+  {
+    "id":2,
+    "title":"FRONTIER",
+    "slug":"/frontier",
+    "vesions":[
+      {
+        "id":0,
+        "model":"FRONTIER LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":1,
+        "model":"FRONTIER LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":2,
+        "model":"FRONTIER LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":3,
+        "model":"FRONTIER LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      }
+
+    ],
+    "images":[
+      {
+        "id":0,
+        "path":""    
+      },
+      {
+        "id":1,
+        "path":""    
+      },
+      {
+        "id":2,
+        "path":""    
+      },
+      {
+        "id":3,
+        "path":""    
+      },
+      {
+        "id":4,
+        "path":""    
+      },
+      {
+        "id":5,
+        "path":""    
+      }
+    ]
+  
+  },
+  {
+    "id":3,
+    "title":"versa",
+    "slug":"/versa",
+    "vesions":[
+      {
+        "id":0,
+        "model":"VERSA LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":1,
+        "model":"VERSA LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":2,
+        "model":"VERSA LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":3,
+        "model":"VERSA LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":4,
+        "model":"VERSA LUX 2.5 CVT 4X2 5 PASAJEROS"    
+      },
+      {
+        "id":5,
+        "model":"VERSA LUX 2.5 CVT 4X2 5 PASAJEROS 2"    
+      }
+
+    ],
+    "images":[
+      {
+        "id":0,
+        "path":""    
+      },
+      {
+        "id":1,
+        "path":""    
+      },
+      {
+        "id":2,
+        "path":""    
+      },
+      {
+        "id":3,
+        "path":""    
+      },
+      {
+        "id":4,
+        "path":""    
+      },
+      {
+        "id":5,
+        "path":""    
+      }
+    ]
+  
+  }
+
+]
