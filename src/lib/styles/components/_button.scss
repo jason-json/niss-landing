@@ -94,3 +94,21 @@
         transform: translateY(0);
     }
 }
+
+.slick-next {
+    right: 5px !important;
+}
+.slick-prev {
+    left: 5px !important;
+}
+.slick-prev:before, .slick-next:before {
+    color: #ccc !important;
+}
+.slick-prev:before {
+    content: '\003C' !important;
+    font-size: 4rem;
+}
+.slick-next:before {
+    content: '\003E' !important;
+    font-size: 4rem;
+}

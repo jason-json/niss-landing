@@ -1,8 +1,11 @@
 import React from "react";
-import Carousel from "./Carousel";
+
+import Carrousel from "./Carrousel";
 import Versions from "./Versions";
 import Form from "./Form";
+
 import logo from "../../lib/img/logo.jpg";
+
 const Car = props => {
   return (
     <main>
@@ -15,6 +18,7 @@ const Car = props => {
         </div>
         <div className="header_section_item"/>
       </section>
+      <Carrousel images={props.images}/>
     </main>
   );
 };

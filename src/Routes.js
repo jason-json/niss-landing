@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import CarsData from "./data/cars.json"; // DATA
 import Layout from "./utils/Layout"; // Layout
 import Car from "./components/Car"; // Main component
-import { runInThisContext } from "vm";
 
 class Routes extends Component {
   constructor(props) {

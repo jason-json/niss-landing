@@ -29,27 +29,33 @@
     "images":[
       {
         "id":0,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":1,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":2,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":3,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":4,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":5,
-        "path":""    
+        "name":"",
+        "alt":""   
       }
     ]
   
@@ -84,27 +90,33 @@
     "images":[
       {
         "id":0,
-        "path":""    
+        "name":"qashqai.png",
+        "alt":"Qashqai"    
       },
       {
         "id":1,
-        "path":""    
+        "name":"qashqai.png",
+        "alt":"Qashqai"   
       },
       {
         "id":2,
-        "path":""    
+        "name":"qashqai.png",
+        "alt":"Qashqai"  
       },
       {
         "id":3,
-        "path":""    
+        "name":"",
+        "alt":"Qashqai"   
       },
       {
         "id":4,
-        "path":""    
+        "name":"",
+        "alt":"Qashqai"   
       },
       {
         "id":5,
-        "path":""    
+        "name":"",
+        "alt":"Qashqai"   
       }
     ]
   
@@ -135,27 +147,33 @@
     "images":[
       {
         "id":0,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":1,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":2,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":3,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":4,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":5,
-        "path":""    
+        "name":"",
+        "alt":""   
       }
     ]
   
@@ -194,27 +212,33 @@
     "images":[
       {
         "id":0,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":1,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":2,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":3,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":4,
-        "path":""    
+        "name":"",
+        "alt":""   
       },
       {
         "id":5,
-        "path":""    
+        "name":"",
+        "alt":""   
       }
     ]
   

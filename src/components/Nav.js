@@ -3,18 +3,15 @@ import { Link } from "react-router-dom";
 
 import CarsData from "../data/cars.json";
 class Nav extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   getCarTitle = carId => {
     let car = CarsData.filter(carDataId => carDataId.id === carId);
-    console.log(car);
+    // console.log(car);
     return car[0].title;
   };
   getCarSlug = carId => {
     let car = CarsData.filter(carDataId => carDataId.id === carId);
-    console.log(car);
+    // console.log(car);
     return car[0].slug;
   };
 
