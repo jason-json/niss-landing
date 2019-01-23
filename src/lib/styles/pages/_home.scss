@@ -53,6 +53,10 @@
   }
   &_wrap {
     text-align: left;
+    @media (min-width: 1799px) {
+      width: 350px;
+      
+    }
     width: 240px;
     margin: 0 auto;
     font-size: 1.2rem;

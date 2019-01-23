@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import Form from './Form';
 
 class Versions extends Component {
   constructor(props) {
     super(props);
     this.state = {
       versions: this.props.versions,
-      numberSelected: 0
+      numberSelected: 0,
+      formVisible: false
     };
   }
   componentDidMount(){
@@ -24,6 +26,11 @@ class Versions extends Component {
     let countSelected = newState.filter(v => v.selected === true).length;
     this.setState({ numberSelected: countSelected});
   };
+
+  showHideForm = () =>{
+      this.setState({formVisible: !this.state.formVisible});
+  }
+
   render() {
     let models = null;
     models = (
@@ -66,9 +73,10 @@ class Versions extends Component {
       <section className="versions_section u-margin-top-small">
         <h2 className="u-margin-bottom-small">Seleccione la Versión</h2>
         {models}
-        <button className="btn">
+        <button className="btn u-margin-bottom-medium" onClick={this.showHideForm}>
           SOLICITAR COTIZACIÓN ({this.state.numberSelected}) >
         </button>
+        {this.state.formVisible ?  <Form showHideForm={this.showHideForm} versions={this.state.versions}/> : null}
       </section>
     );
   }
