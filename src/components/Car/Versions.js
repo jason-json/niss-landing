@@ -27,7 +27,7 @@ class Versions extends Component {
   render() {
     let models = null;
     models = (
-      <div className="u-margin-bottom-medium">
+      <div className="versions_section_wrap u-margin-bottom-medium">
         {this.state.versions.map((version, index) => {
           if (version.id !== "") {
             return (
@@ -67,7 +67,7 @@ class Versions extends Component {
         <h2 className="u-margin-bottom-small">Seleccione la Versión</h2>
         {models}
         <button className="btn">
-          SOLICITAR COTIZACIÓN ({this.state.numberSelected})
+          SOLICITAR COTIZACIÓN ({this.state.numberSelected}) >
         </button>
       </section>
     );

@@ -10,7 +10,12 @@
   color: $color_primary;
   background: $color_grey_dark;
   text-transform: uppercase;
-  padding: 0.5rem 0.9rem 0.5rem 0.9rem;
+  padding: 0.5rem 0.9rem 0.6rem 0.9rem;
+
+  font-family: "NissanRegular",Verdana,Arial,sans-serif;;
+  font-weight: bold;
+  font-size: 1.5rem;
+
   &_item_pre {
     flex-grow: 1;
     width: 33%;

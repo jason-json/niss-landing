@@ -13,7 +13,11 @@
   &_logo {
     flex-grow: 1;
     width: 33%;
-    padding-left: 2%;
+    padding-left: 4%;
+
+    img {
+      width: 60px;
+    }
   }
   &_item {
     flex-grow: 1;
@@ -42,9 +46,18 @@
       margin-left: 0.35rem;
       background: $color-grey-dark-3;
       color: $color-white;
-      padding: 0.1rem 0.6rem 0.1rem 0.6rem;
+      font-size: 73%;
+      padding: 0.1rem 0.8rem 0.1rem 0.8rem;
       border-radius: 50%;
     }
   }
- 
+  &_wrap {
+    text-align: left;
+    width: 240px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    input{
+      margin-bottom: 1.2rem;
+    }
+  }
 }
