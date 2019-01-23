@@ -21,17 +21,30 @@
     text-align: center;
   }
 }
-.carrousel_section{
-    margin:0 auto;
-    width: 95%;
-    height: 70vh;
-    img{
-        margin: 0 auto;
 
+.carrousel_section {
+  margin: 0 auto;
+  width: 95%;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.versions_section {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  h2 {
+    color: $color-primary;
+    &::after {
+      content: "?";
+      margin-left: 0.35rem;
+      background: $color-grey-dark-3;
+      color: $color-white;
+      padding: 0.1rem 0.6rem 0.1rem 0.6rem;
+      border-radius: 50%;
     }
-    &_wrap{
-
-
-    }
-
+  }
+ 
 }

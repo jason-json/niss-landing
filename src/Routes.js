@@ -114,9 +114,7 @@ class Routes extends Component {
                 )}
               />
             );
-          } else {
-            return null;
-          }
+          } else return null;
         })}
       </div>
     );

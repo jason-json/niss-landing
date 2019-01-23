@@ -19,6 +19,7 @@ const Car = props => {
         <div className="header_section_item"/>
       </section>
       <Carrousel images={props.images}/>
+      <Versions versions={props.versions}/>
     </main>
   );
 };

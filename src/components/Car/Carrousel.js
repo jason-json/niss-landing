@@ -19,7 +19,7 @@ const Carrousel = props => {
           {props.images.map((image, index) => {
             if (image.name !== "") {
               return (
-                <div >
+                <div key={index}>
                     <img
                       src={require(`../../lib/img/cars/${image.name}`)}
                       alt={image.alt}
