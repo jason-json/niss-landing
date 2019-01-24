@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+
 import CarsData from "./data/cars.json"; // DATA
+
+import Home from './components/Home'
 import Layout from "./utils/Layout"; // Layout
 import Car from "./components/Car"; // Main component
 
@@ -129,11 +132,11 @@ class Routes extends Component {
             onClickPrev={this.onClickPrev}
             onClickNext={this.onClickNext}
           >
+            <Route exact path="/" component={Home} />
             {routes}
           </Layout>
         </Switch>
-        {/* <button onClick={this.onClickPrev}>Prev</button>
-        <button onClick={this.onClickNext}>Next</button> */}
+        }
       </div>
     );
   }
