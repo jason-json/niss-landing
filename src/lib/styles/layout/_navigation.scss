@@ -15,7 +15,8 @@
   font-family: "NissanRegular",Verdana,Arial,sans-serif;;
   font-weight: bold;
   font-size: 1.5rem;
-
+  align-items: center;
+  
   &_item_pre {
     flex-grow: 1;
     width: 33%;
@@ -31,6 +32,17 @@
     flex-grow: 1;
     width: 33%;
     text-align: right;
+  }
+
+  &_item_popup_one {
+    flex-grow: 1;
+    width: 35%;
+    text-align: left;
+  }
+  &_item_popup_two {
+    flex-grow: 1;
+    width: 65%;
+    text-align: left;
   }
 
   &_prev {

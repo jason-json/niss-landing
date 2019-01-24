@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from './Form';
+import Form from "./Form";
 
 class Versions extends Component {
   constructor(props) {
@@ -10,10 +10,11 @@ class Versions extends Component {
       formVisible: false
     };
   }
-  componentDidMount(){
-    let countSelected = this.state.versions.filter(v => v.selected === true).length;
+  componentDidMount() {
+    let countSelected = this.state.versions.filter(v => v.selected === true)
+      .length;
     console.log(countSelected);
-    this.setState({ numberSelected: countSelected});
+    this.setState({ numberSelected: countSelected });
   }
 
   handleChangeCheckBox = event => {
@@ -22,14 +23,14 @@ class Versions extends Component {
       version => version.id === parseInt(event.target.name)
     );
     newState[index] = { ...newState[index], selected: event.target.checked };
-    this.setState({ versions: newState});
+    this.setState({ versions: newState });
     let countSelected = newState.filter(v => v.selected === true).length;
-    this.setState({ numberSelected: countSelected});
+    this.setState({ numberSelected: countSelected });
   };
 
-  showHideForm = () =>{
-      this.setState({formVisible: !this.state.formVisible});
-  }
+  showHideForm = () => {
+    this.setState({ formVisible: !this.state.formVisible });
+  };
 
   render() {
     let models = null;
@@ -70,14 +71,25 @@ class Versions extends Component {
     );
 
     return (
-      <section className="versions_section u-margin-top-small">
-        <h2 className="u-margin-bottom-small">Seleccione la Versión</h2>
-        {models}
-        <button className="btn u-margin-bottom-medium" onClick={this.showHideForm}>
-          SOLICITAR COTIZACIÓN ({this.state.numberSelected}) >
-        </button>
-        {this.state.formVisible ?  <Form showHideForm={this.showHideForm} versions={this.state.versions}/> : null}
-      </section>
+      <div>
+        <section className="versions_section u-margin-top-small">
+          <h2 className="u-margin-bottom-small">Seleccione la Versión</h2>
+          {models}
+          <button
+            className="btn u-margin-bottom-medium"
+            onClick={this.showHideForm}
+          >
+            SOLICITAR COTIZACIÓN ({this.state.numberSelected}) >
+          </button>
+        </section>
+
+        {this.state.formVisible ? (
+          <Form
+            showHideForm={this.showHideForm}
+            versions={this.state.versions}
+          />
+        ) : null}
+      </div>
     );
   }
 }
