@@ -37,7 +37,7 @@ class Form extends Component {
             <button onClick={this.props.showHideForm}>⮪</button>
             <h3 className="navigation_item_popup_two">
               AGENCIA DATSUN SABANA:
-              <a href="tel:+50622900505">+506 2290-0505</a>
+              <a href="tel:+50622900505" target="_blank">+506 2290-0505</a>
             </h3>
           </div>
           <h1>DATOS DE CONTACTO</h1>
@@ -50,6 +50,7 @@ class Form extends Component {
                   id="nombre"
                   className="form__input"
                   placeholder="Nombre*"
+                  required
                 />
                 <label for="nombre" className="form__label">
                   Nombre*
@@ -62,6 +63,7 @@ class Form extends Component {
                   id="apellidos"
                   className="form__input"
                   placeholder="Apellidos*"
+                  required
                 />
                 <label for="apellidos" className="form__label">
                   Apellidos*
@@ -74,6 +76,7 @@ class Form extends Component {
                   id="email"
                   className="form__input"
                   placeholder="Correo electrónico*"
+                  required
                 />
                 <label for="email" className="form__label">
                   Correo electrónico*
@@ -86,6 +89,7 @@ class Form extends Component {
                   id="telefono"
                   className="form__input"
                   placeholder="Teléfono*"
+                  required
                 />
                 <label for="telefono" className="form__label">
                   Teléfono*
@@ -106,6 +110,7 @@ class Form extends Component {
                 id="autoriza"
                 value="autoriza"
                 className="css-checkbox"
+                required
               />
               <label htmlFor="autoriza" className="css-label" style={{textAlign: 'left !important'}}>
                 Autorizo a Agencia Datsun en el envío de información de sus productos.
