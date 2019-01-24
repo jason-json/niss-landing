@@ -42,7 +42,7 @@ class Form extends Component {
           </div>
           <h1>DATOS DE CONTACTO</h1>
           <div className="row">
-            <form action="" className="form">
+            <form action="sendMail.php" className="form">
               <div className="form-group">
                 <input
                   type="text"

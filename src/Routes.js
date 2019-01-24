@@ -6,6 +6,7 @@ import CarsData from "./data/cars.json"; // DATA
 import Home from './components/Home'
 import Layout from "./utils/Layout"; // Layout
 import Car from "./components/Car"; // Main component
+import Gracias from './components/Gracias';
 
 class Routes extends Component {
   constructor(props) {
@@ -134,6 +135,7 @@ class Routes extends Component {
           >
             <Route exact path="/" component={Home} />
             {routes}
+            <Route path="/gracias/:sended" component={Gracias}/> 
           </Layout>
         </Switch>
         }
