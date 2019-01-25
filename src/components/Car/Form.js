@@ -1,10 +1,16 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentVersions: {}
+      currentVersions: {},
+      nombre:"",
+      apellidos:"",
+      email:"",
+      telefono:"",
+      info:""
     };
   }
   componentWillMount() {
@@ -18,6 +24,24 @@ class Form extends Component {
   componentWillUnmount() {
     document.body.style.overflow = "visible";
   }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    axios.post('../sendMail.php', {
+      nombre: this.state.nombre,
+      apellidos: this.state.apellidos,
+      email:this.state.email,
+      telefono:this.state.email,
+      info:this.state.info,
+      versiones:this.state.versiones
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  };
 
   render() {
     let currentVersions = null;
@@ -37,12 +61,14 @@ class Form extends Component {
             <button onClick={this.props.showHideForm}>⮪</button>
             <h3 className="navigation_item_popup_two">
               AGENCIA DATSUN SABANA:
-              <a href="tel:+50622900505" target="_blank">+506 2290-0505</a>
+              <a href="tel:+50622900505" target="_blank">
+                +506 2290-0505
+              </a>
             </h3>
           </div>
           <h1>DATOS DE CONTACTO</h1>
           <div className="row">
-            <form action="sendMail.php" className="form"  method="post">
+            <form onSubmit={this.handleSubmit} className="form">
               <div className="form-group">
                 <input
                   type="text"
@@ -112,11 +138,22 @@ class Form extends Component {
                 className="css-checkbox"
                 required
               />
-              <label htmlFor="autoriza" className="css-label" style={{textAlign: 'left !important'}}>
-                Autorizo a Agencia Datsun en el envío de información de sus productos.
+              <label
+                htmlFor="autoriza"
+                className="css-label"
+                style={{ textAlign: "left !important" }}
+              >
+                Autorizo a Agencia Datsun en el envío de información de sus
+                productos.
               </label>
-              <a href="#" className="u-margin-bottom-small">Ver Política de Privacidad</a>
-              <input type="submit" value="cotice >" className="btn u-margin-bottom-medium"/>
+              <a href="#" className="u-margin-bottom-small">
+                Ver Política de Privacidad
+              </a>
+              <input
+                type="submit"
+                value="cotice >"
+                className="btn u-margin-bottom-medium"
+              />
             </form>
           </div>
         </div>

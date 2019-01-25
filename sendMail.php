@@ -40,14 +40,14 @@
 
   $to = "jason@miweb.cr";
   // $to = "";
-  $subject = "Odontotalk formulario de inscripción";
+  $subject = "Solicitud de ".$email." cotización Nissan";
   $message = '';
 
   //html mail table
   $message .= '<html>';
   $message .= '<table  width="60%"  height="20%" align="center" style="border-style:solid; border-width:1px; border-color:#b1b5bc;" cellpadding="2" cellspacing=”0″  >';
   $message .= '<tr align="center">';
-  $message .= '<th bgcolor="#025862" aling="center" width:"100%" colspan="2" style="font-size:20px"><font color="#fff">Odontotalk formulario de inscripción</font></th>';
+  $message .= '<th bgcolor="#025862" aling="center" width:"100%" colspan="2" style="font-size:20px"><font color="#fff">Solicitud cotización Nissan</font></th>';
   $message .= '</tr>';            
   $message .= '<tr height="10%" style="font-size:18px;"  bgcolor="#f2f2f2">';
   $message .= '<td><strong>Nombre:</strong></td>';
