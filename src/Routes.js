@@ -38,10 +38,10 @@ class Routes extends Component {
     return (
       <div>
         <Switch>
+          <Route path="/gracias/:sended" component={Gracias}/> 
           <Layout>
             <Route exact path="/" component={Home} />
             {routes}
-            <Route path="/gracias/:sended" component={Gracias}/> 
           </Layout>
         </Switch>
         }

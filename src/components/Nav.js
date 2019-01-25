@@ -14,15 +14,17 @@ class Nav extends Component {
 
   componentWillMount() {
     let path = window.location.pathname;
-    let currentCar = CarsData.filter(car => car.slug === path);
-    let prevCar = currentCar[0].id - 1;
-    let nexCar = currentCar[0].id + 1;
+    if(path !== "/"){
+      let currentCar = CarsData.filter(car => car.slug === path);
+      let prevCar = currentCar[0].id - 1;
+      let nexCar = currentCar[0].id + 1;
 
-    this.setState({
-      prevCarId: prevCar,
-      currentCarId: currentCar[0].id,
-      nextCarId: nexCar
-    });
+      this.setState({
+        prevCarId: prevCar,
+        currentCarId: currentCar[0].id,
+        nextCarId: nexCar
+      });
+    } 
   }
 
   onClickNext = () => {
