@@ -9,94 +9,6 @@ import Car from "./components/Car"; // Main component
 import Gracias from './components/Gracias';
 
 class Routes extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      prevCarId: 1,
-      currentCarId: 2,
-      nextCarId: 3
-    };
-  }
-
-  onClickNext = () => {
-    const current = this.state.currentCarId;
-    // console.log(`Current:${current}`);
-
-    let newCurrent = current + 1;
-    // console.log(`New current:${newCurrent}`);
-
-    let newNext = newCurrent + 1;
-    // console.log(`New Next:${newNext}`);
-
-    let newPre = newCurrent - 1;
-    // console.log(`New Prev:${newPre}`);
-
-    // if exist
-    let existCurrent = CarsData.filter(
-      carDataId => carDataId.id === newCurrent
-    );
-    // console.log(`Exist Next:${existCurrent}`);
-
-    let existNext = CarsData.filter(carDataId => carDataId.id === newNext);
-    // console.log(`Exist Next:${existNext}`);
-
-    let existPrev = CarsData.filter(carDataId => carDataId.id === newPre);
-    // console.log(`Exist Prev:${existPrev}`);
-
-    if (existCurrent.length !== 0) {
-      this.setState({ currentCarId: newCurrent });
-
-      existNext.length !== 0
-        ? this.setState({ nextCarId: newNext })
-        : this.setState({ nextCarId: null });
-
-      existPrev.length !== 0
-        ? this.setState({ prevCarId: newPre })
-        : this.setState({ prevCarId: null });
-    } else {
-      this.setState({ prevCarId: 1, currentCarId: 2, nextCarId: 3 });
-    }
-  };
-
-  onClickPrev = () => {
-    const current = this.state.currentCarId;
-    // console.log(`Current:${current}`);
-
-    let newCurrent = current - 1;
-    // console.log(`New current:${newCurrent}`);
-
-    let newNext = newCurrent + 1;
-    // console.log(`New Next:${newNext}`);
-
-    let newPre = newCurrent - 1;
-    // console.log(`New Prev:${newPre}`);
-
-    // if exist
-    let existCurrent = CarsData.filter(
-      carDataId => carDataId.id === newCurrent
-    );
-    // console.log(`Exist Next:${existCurrent}`);
-
-    let existNext = CarsData.filter(carDataId => carDataId.id === newNext);
-    // console.log(`Exist Next:${existNext}`);
-
-    let existPrev = CarsData.filter(carDataId => carDataId.id === newPre);
-    // console.log(`Exist Prev:${existPrev}`);
-
-    if (existCurrent.length !== 0) {
-      this.setState({ currentCarId: newCurrent });
-
-      existNext.length !== 0
-        ? this.setState({ nextCarId: newNext })
-        : this.setState({ nextCarId: null });
-
-      existPrev.length !== 0
-        ? this.setState({ prevCarId: newPre })
-        : this.setState({ prevCarId: null });
-    } else {
-      this.setState({ prevCarId: 1, currentCarId: 2, nextCarId: 3 });
-    }
-  };
 
   render() {
     let routes = null;
@@ -126,13 +38,7 @@ class Routes extends Component {
     return (
       <div>
         <Switch>
-          <Layout
-            currentCarId={this.state.currentCarId}
-            prevCarId={this.state.prevCarId}
-            nextCarId={this.state.nextCarId}
-            onClickPrev={this.onClickPrev}
-            onClickNext={this.onClickNext}
-          >
+          <Layout>
             <Route exact path="/" component={Home} />
             {routes}
             <Route path="/gracias/:sended" component={Gracias}/> 
