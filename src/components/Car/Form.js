@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
       currentVersions: {},
-      nombre:"",
-      apellidos:"",
-      email:"",
-      telefono:"",
-      info:""
+      nombre: "",
+      apellidos: "",
+      email: "",
+      telefono: "",
+      info: "",
+      authorize: false,
+      sending: false,
+      showMessage: false,
+      colorAuthorizeMessage: "#000"
     };
   }
   componentWillMount() {
@@ -25,22 +29,65 @@ class Form extends Component {
     document.body.style.overflow = "visible";
   }
 
+  handleHighlightEmptyValues = value => {
+    if (value === "" && this.state.sending) {
+      return "3px solid #ff7730";
+    }
+    return "none";
+  };
+
+  hasEmptyValue = () => {
+    const { nombre, apellidos, email, telefono } = this.state;
+    const emptyValues = [nombre, apellidos, email, telefono].some(
+      value => value === ""
+    );
+    if (emptyValues) {
+      return true;
+    }
+
+    return false;
+  };
+
+  handleChange = event => {
+    const state = this.state;
+    state[event.target.name] = event.target.value;
+    this.setState(state);
+  };
+
+  handleChangeCheckbox = event => {
+    event.target.checked
+      ? this.setState({ colorAuthorizeMessage: "#000" })
+      : this.setState({ colorAuthorizeMessage: "#ff7730" });
+    this.setState({ authorize: event.target.checked });
+  };
+
   handleSubmit = event => {
     event.preventDefault();
-    axios.post('../sendMail.php', {
-      nombre: this.state.nombre,
-      apellidos: this.state.apellidos,
-      email:this.state.email,
-      telefono:this.state.email,
-      info:this.state.info,
-      versiones:this.state.versiones
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    this.setState({ sending: true });
+    if (!this.hasEmptyValue() && this.state.authorize) {
+      this.setState({ showMessage: false });
+      axios
+        .post("../sendMail.php", {
+          nombre: this.state.nombre,
+          apellidos: this.state.apellidos,
+          email: this.state.email,
+          telefono: this.state.email,
+          info: this.state.info,
+          versiones: this.state.versiones
+        })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    } else {
+      if (this.state.authorize) {
+        this.setState({ colorAuthorizeMessage: "#000", showMessage: true });
+      } else {
+        this.setState({ colorAuthorizeMessage: "#ff7730", showMessage: true });
+      }
+    }
   };
 
   render() {
@@ -54,6 +101,13 @@ class Form extends Component {
         })}
       </div>
     );
+
+    let message = (
+      <p style={{ color: "#ff7730" }}>
+        Complete todos los campos obligatorios *
+      </p>
+    );
+
     return (
       <div className="popup">
         <div className="popup_wrap">
@@ -75,10 +129,15 @@ class Form extends Component {
                   name="nombre"
                   id="nombre"
                   className="form__input"
+                  style={{
+                    borderBottom: `${this.handleHighlightEmptyValues(
+                      this.state.nombre
+                    )}`
+                  }}
                   placeholder="Nombre*"
-                  required
+                  onChange={this.handleChange}
                 />
-                <label for="nombre" className="form__label">
+                <label htmlFor="nombre" className="form__label">
                   Nombre*
                 </label>
               </div>
@@ -88,10 +147,15 @@ class Form extends Component {
                   name="apellidos"
                   id="apellidos"
                   className="form__input"
+                  style={{
+                    borderBottom: `${this.handleHighlightEmptyValues(
+                      this.state.apellidos
+                    )}`
+                  }}
                   placeholder="Apellidos*"
-                  required
+                  onChange={this.handleChange}
                 />
-                <label for="apellidos" className="form__label">
+                <label htmlFor="apellidos" className="form__label">
                   Apellidos*
                 </label>
               </div>
@@ -101,10 +165,15 @@ class Form extends Component {
                   name="email"
                   id="email"
                   className="form__input"
+                  style={{
+                    borderBottom: `${this.handleHighlightEmptyValues(
+                      this.state.email
+                    )}`
+                  }}
                   placeholder="Correo electrónico*"
-                  required
+                  onChange={this.handleChange}
                 />
-                <label for="email" className="form__label">
+                <label htmlFor="email" className="form__label">
                   Correo electrónico*
                 </label>
               </div>
@@ -114,10 +183,15 @@ class Form extends Component {
                   name="telefono"
                   id="telefono"
                   className="form__input"
+                  style={{
+                    borderBottom: `${this.handleHighlightEmptyValues(
+                      this.state.telefono
+                    )}`
+                  }}
                   placeholder="Teléfono*"
-                  required
+                  onChange={this.handleChange}
                 />
-                <label for="telefono" className="form__label">
+                <label htmlFor="telefono" className="form__label">
                   Teléfono*
                 </label>
               </div>
@@ -129,26 +203,32 @@ class Form extends Component {
                 cols="230"
                 rows="3"
                 className="form__input u-margin-bottom-small"
+                onChange={this.handleChange}
               />
               <input
                 type="checkbox"
-                name="autoriza"
-                id="autoriza"
-                value="autoriza"
+                name="authorize"
+                id="authorize"
+                value="authorize"
                 className="css-checkbox"
-                required
+                onChange={this.handleChangeCheckbox}
               />
               <label
-                htmlFor="autoriza"
+                htmlFor="authorize"
                 className="css-label"
-                style={{ textAlign: "left !important" }}
+                style={{
+                  textAlign: "left !important",
+                  color: this.state.colorAuthorizeMessage
+                }}
               >
                 Autorizo a Agencia Datsun en el envío de información de sus
-                productos.
+                productos.*
               </label>
               <a href="#" className="u-margin-bottom-small">
                 Ver Política de Privacidad
               </a>
+              {this.state.showMessage ? message : null}
+              <br />
               <input
                 type="submit"
                 value="cotice >"
