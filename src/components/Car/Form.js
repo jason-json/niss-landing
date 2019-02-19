@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { ReCaptcha } from "react-recaptcha-v3";
+import { loadReCaptcha } from "react-recaptcha-v3";
+import imgRecaptcha from "../../lib/img/icons/recaptcha_logo.png";
 
 class Form extends Component {
   constructor(props) {
@@ -14,9 +17,11 @@ class Form extends Component {
       authorize: false,
       sending: false,
       showMessage: false,
-      colorAuthorizeMessage: "#000"
+      colorAuthorizeMessage: "#000",
+      recaptchaSuccess: false
     };
   }
+
   componentWillMount() {
     let versions = [...this.props.versions];
     let newState = versions.filter(v => v.selected === true);
@@ -24,6 +29,7 @@ class Form extends Component {
   }
   componentDidMount() {
     document.body.style.overflow = "hidden";
+    loadReCaptcha("6LedS5IUAAAAAMkifeBBvyQj3_C58-RmytEGZmdz");
   }
   componentWillUnmount() {
     document.body.style.overflow = "visible";
@@ -34,6 +40,30 @@ class Form extends Component {
       return "3px solid #ff7730";
     }
     return "none";
+  };
+
+  verifyCallback = recaptchaToken => {
+    let respond = axios
+      .post(
+        "https://www.google.com/recaptcha/api/siteverify",
+        {
+          secret: "6LedS5IUAAAAAMkifeBBvyQj3_C58-RmytEGZmdz",
+          response: recaptchaToken
+        },
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
+          }
+        }
+      )
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+
+    console.log(recaptchaToken, "<= your recaptcha token");
   };
 
   hasEmptyValue = () => {
@@ -227,12 +257,31 @@ class Form extends Component {
               <a href="#" className="u-margin-bottom-small">
                 Ver Política de Privacidad
               </a>
+              <div className="recaptcha-custom">
+                <img src={imgRecaptcha} alt="Recaptcha" />
+                <p>
+                  Este sitio es protegido por reCAPTCHA y las{" "}
+                  <a href="https://policies.google.com/privacy" target="_blank">
+                    Políticas de Privacidad
+                  </a>{" "}
+                  y{" "}
+                  <a href="https://policies.google.com/terms" target="_blank">
+                    Términos de Servicio
+                  </a>{" "}
+                  de Google.
+                </p>
+              </div>
               {this.state.showMessage ? message : null}
               <br />
+
               <input
                 type="submit"
                 value="cotice >"
                 className="btn u-margin-bottom-medium"
+              />
+              <ReCaptcha
+                sitekey="6LedS5IUAAAAAMkifeBBvyQj3_C58-RmytEGZmdz"
+                verifyCallback={this.verifyCallback}
               />
             </form>
           </div>

@@ -20,3 +20,23 @@
 .u-margin-top-small { margin-top: 5rem !important; }
 .u-margin-top-big { margin-top: 8rem !important; }
 .u-margin-top-huge { margin-top: 10rem !important; }
+
+.grecaptcha-badge{
+    display: none;
+
+}
+
+.recaptcha-custom{
+    text-align: left;
+    margin-bottom: 3rem;
+    a{
+        display: inline !important;
+    }
+    img{
+        float: left;
+    }
+    p{
+        margin-left: 6rem;
+    }
+
+}

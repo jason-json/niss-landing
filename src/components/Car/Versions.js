@@ -13,7 +13,7 @@ class Versions extends Component {
   componentDidMount() {
     let countSelected = this.state.versions.filter(v => v.selected === true)
       .length;
-    console.log(countSelected);
+    // console.log(countSelected);
     this.setState({ numberSelected: countSelected });
   }
 

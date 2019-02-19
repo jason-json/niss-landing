@@ -29,7 +29,7 @@ class Nav extends Component {
 
   onClickNext = () => {
     const current = this.state.currentCarId;
-    console.log(`Current:${current}`);
+    // console.log(`Current:${current}`);
 
     let newCurrent = current + 1;
     // console.log(`New current:${newCurrent}`);
@@ -110,12 +110,12 @@ class Nav extends Component {
 
   getCarTitle = carId => {
     let car = CarsData.filter(carDataId => carDataId.id === carId);
-    console.log(car);
+    // console.log(car);
     return car[0].title;
   };
   getCarSlug = carId => {
     let car = CarsData.filter(carDataId => carDataId.id === carId);
-    console.log(car);
+    // console.log(car);
     return car[0].slug;
   };
 

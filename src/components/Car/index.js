@@ -2,7 +2,7 @@ import React from "react";
 
 import Carrousel from "./Carrousel";
 import Versions from "./Versions";
-import Form from "./Form";
+
 
 import logo from "../../lib/img/logo.jpg";
 
