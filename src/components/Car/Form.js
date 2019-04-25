@@ -4,6 +4,8 @@ import { ReCaptcha } from "react-recaptcha-v3";
 import { loadReCaptcha } from "react-recaptcha-v3";
 import imgRecaptcha from "../../lib/img/icons/recaptcha_logo.png";
 import backArrow from "../../lib/img/icons/back-arrow.png";
+import Loader from "../../helpers/Loader";
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +20,8 @@ class Form extends Component {
       sending: false,
       showMessage: false,
       colorAuthorizeMessage: "#000",
-      recaptchaSuccess: false
+      recaptchaSuccess: false,
+      showLoader: false
     };
   }
 
@@ -95,13 +98,13 @@ class Form extends Component {
     event.preventDefault();
     this.setState({ sending: true });
     if (!this.hasEmptyValue() && this.state.authorize) {
-      this.setState({ showMessage: false });
+      this.setState({ showMessage: false, showLoader: true });
       axios
-        .post("../sendMail.php", {
+        .post("sendMail.php", {
           nombre: this.state.nombre,
           apellidos: this.state.apellidos,
           email: this.state.email,
-          telefono: this.state.email,
+          telefono: this.state.telefono,
           info: this.state.info,
           versiones: this.state.versiones
         })
@@ -140,6 +143,8 @@ class Form extends Component {
 
     return (
       <div className="popup">
+        {this.state.showLoader ? <Loader /> : null}
+
         <div className="popup_wrap">
           <div className="navigation">
             <button onClick={this.props.showHideForm}>

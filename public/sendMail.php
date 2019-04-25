@@ -10,23 +10,26 @@
   $email = "";
   $telefono = "";
   $info = "";
-  
+  $versiones ="";
+
+  $data = json_decode(file_get_contents("php://input"), true);
     
-  $nombre = $_POST['nombre'];;
-  $apellidos = $_POST['apellidos'];;
-  $email = $_POST['email'];;
-  $telefono = $_POST['telefono'];;
-  $info = $_POST['info'];;
+  $nombre = $data['nombre'];
+  $apellidos = $data['apellidos'];
+  $email = $data['email'];
+  $telefono = $data['telefono'];
+  $info = $data['info'];
+  // $versiones = $data['versiones'];
   
 
   //CSV backup
-  $csvfile = 'form-info.csv';
-  $csvNewLine = array($nombre."|".$apellidos."|".$email."|".$telefono."|".$info);
-  $file = fopen($csvfile, "a");
-  foreach ($csvNewLine as $line) {
-    fputcsv($file, explode(',', $line));
-  }
-  fclose($file);
+  // $csvfile = 'form-info.csv';
+  // $csvNewLine = array($nombre."|".$apellidos."|".$email."|".$telefono."|".$info."|".$versiones);
+  // $file = fopen($csvfile, "a");
+  // foreach ($csvNewLine as $line) {
+  //   fputcsv($file, explode(',', $line));
+  // }
+  // fclose($file);
 
 
   //MAIL SETTINGS
@@ -65,18 +68,27 @@
   $message .= '<td><strong>Telefóno:</strong></td>';
   $message .= '<td>'.$telefono.'</td>';
   $message .= '</tr>';
-  $message .= '<tr   style="font-size:18px;" bgcolor="#ddd">';
-  $message .= '<td><strong>información adicional:</strong></td>';
-  $message .= '<td>'.$info.'</td>';
-  $message .= '</tr>';
+  if($info !== ""){
+    $message .= '<tr   style="font-size:18px;" bgcolor="#ddd">';
+    $message .= '<td><strong>Información adicional:</strong></td>';
+    $message .= '<td>'.$info.'</td>';
+    $message .= '</tr>';
+  }
+  if($versiones !== ""){
+    $message .= '<tr   style="font-size:18px;" bgcolor="#ddd">';
+    $message .= '<td><strong>Versiones</strong></td>';
+    $message .= '<td>'.$versiones.'</td>';
+    $message .= '</tr>';
+  }
+
   $message .= '</table>';
   $message .= '</html>';
   
   if (mail($to,$subject,$message, $headers)) {
-    header("Location: ../gracias/true");
+    echo '<script>window.location = "../gracias/true";</script>';
     die();
   } else {
-    header("Location: ../gracias/false");
+    echo '<script>window.location = "../gracias/false";</script>';
     die();
   }
 

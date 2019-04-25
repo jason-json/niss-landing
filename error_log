@@ -1,0 +1,10 @@
+[Thu Apr 25 12:52:17.027304 2019] [ssl:error] [pid 25575] AH01936: stapling_check_response: response times invalid
+[Thu Apr 25 12:52:17.027381 2019] [ssl:error] [pid 25575] AH01943: stapling_renew_response: error in retrieved response!
+[Thu Apr 25 15:11:56.283911 2019] [ssl:error] [pid 19258] AH01936: stapling_check_response: response times invalid
+[Thu Apr 25 15:11:56.283969 2019] [ssl:error] [pid 19258] AH01943: stapling_renew_response: error in retrieved response!
+[Thu Apr 25 16:03:59.248065 2019] [:error] [pid 28762] [client 186.177.19.198:11108] PHP Notice:  Undefined index: versiones in /data/websites/dev.miweb.cr/public_html/sendMail.php on line 22, referer: https://dev.miweb.cr/versa
+[Thu Apr 25 16:03:59.248182 2019] [:error] [pid 28762] [client 186.177.19.198:11108] PHP Warning:  fopen(form-info.csv): failed to open stream: Permission denied in /data/websites/dev.miweb.cr/public_html/sendMail.php on line 28, referer: https://dev.miweb.cr/versa
+[Thu Apr 25 16:03:59.248209 2019] [:error] [pid 28762] [client 186.177.19.198:11108] PHP Warning:  fputcsv() expects parameter 1 to be resource, boolean given in /data/websites/dev.miweb.cr/public_html/sendMail.php on line 30, referer: https://dev.miweb.cr/versa
+[Thu Apr 25 16:03:59.248217 2019] [:error] [pid 28762] [client 186.177.19.198:11108] PHP Warning:  fclose() expects parameter 1 to be resource, boolean given in /data/websites/dev.miweb.cr/public_html/sendMail.php on line 32, referer: https://dev.miweb.cr/versa
+[Thu Apr 25 17:02:24.893135 2019] [:error] [pid 31254] [client 186.177.19.198:43405] PHP Notice:  Undefined index: versiones in /data/websites/dev.miweb.cr/public_html/sendMail.php on line 22, referer: https://dev.miweb.cr/qashqai
+[Thu Apr 25 17:09:03.222527 2019] [:error] [pid 31208] [client 186.177.19.198:50776] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /data/websites/dev.miweb.cr/public_html/sendMail.php on line 81, referer: https://dev.miweb.cr/qashqai
