@@ -1,84 +1,81 @@
 .btn {
-    &,
-    &:link,
-    &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        display: inline-block;
-        transition: all .2s;
-        position: relative;
-   
-        @media (min-width: 332px) {
-            font-size: 2rem;
-        }
-        font-size: 1.80rem;
-        font-weight: bold;
-        color: $color-white;
-        background: $color-primary;
-        //Change for the <button> element
-        border: none;
-        cursor: pointer;
-    }
-    &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-    }
-    
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
 
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
+    @media (min-width: 332px) {
+      font-size: 2rem;
     }
-    
-    &--animated {
-        animation: moveInBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
-    }
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $color-white;
+    background: $color-primary;
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }
 .slick-next {
-    right: 5px !important;
+  right: 5px !important;
 }
 .slick-prev {
-    left: 5px !important;
-    z-index: 1;
+  left: 5px !important;
+  z-index: 1;
 }
-.slick-prev:before, .slick-next:before {
-    color: #ccc !important;
+.slick-prev:before,
+.slick-next:before {
+  color: #ccc !important;
 }
 .slick-prev:before {
-    content: '\003C' !important;
-    font-size: 4rem;
+  content: url("../img/icons/flecha-gris-izq.png") !important;
 }
 .slick-next:before {
-    content: '\003E' !important;
-    font-size: 4rem;
+  content: url("../img/icons/flecha-gris.png") !important;
+}
+.slick-dots li.slick-active button {
+  margin-top: 1rem;
 }
 .slick-dots li.slick-active button:before {
-    opacity: .75;
-    content: '📷';
-    font-size: 1.5rem;
-    color: black;
+  margin-top: 1rem;
 }
-.slick-dots{
-    li{
-        button{
-            &:before{
-                opacity: .15;
-                content: '📷';
-                font-size: 1.5rem;
-                color: black;
-            }
-        }
+.slick-dots {
+  li {
+    button {
+      margin-top: 1rem;
+      &:before {
+        content: url("../img/icons/photo-camera-gray.png");
+        margin-top: 1rem;
+      }
     }
+  }
 }

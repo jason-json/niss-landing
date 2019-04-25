@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 
 import CarsData from "./data/cars.json"; // DATA
 
-import Home from './components/Home'
+import Home from "./components/Home";
 import Layout from "./utils/Layout"; // Layout
 import Car from "./components/Car"; // Main component
-import Gracias from './components/Gracias';
+import Gracias from "./components/Gracias";
 
 class Routes extends Component {
-
   render() {
     let routes = null;
     routes = (
@@ -38,7 +37,7 @@ class Routes extends Component {
     return (
       <div>
         <Switch>
-          <Route path="/gracias/:sended" component={Gracias}/> 
+          <Route path="/gracias/:sended" component={Gracias} />
           <Layout>
             <Route exact path="/" component={Home} />
             {routes}

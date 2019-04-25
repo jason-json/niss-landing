@@ -6,20 +6,30 @@
     "versions": [
       {
         "id": 0,
-        "model": " MARCH ADVANCE 1.6 MT",
+        "model": " ADVANCE MT",
         "selected": true
       },
       {
         "id": 1,
-        "model": " MARCH ADVANCE 1.6 AT",
+        "model": " ADVANCE AT",
+        "selected": false
+      },
+      {
+        "id": 2,
+        "model": " LUX MT",
+        "selected": false
+      },
+      {
+        "id": 3,
+        "model": " LUX AT",
         "selected": false
       }
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "march/march.png",
+        "alt": "March"
       },
       {
         "id": 1,
@@ -55,48 +65,38 @@
     "versions": [
       {
         "id": 0,
-        "model": " ADVANCE CVT 4X2 5 PASAJEROS",
+        "model": " LUX MT 4X2",
         "selected": true
       },
       {
         "id": 1,
         "model": " ADVANCE MT 4X2",
         "selected": false
+      },
+      {
+        "id": 2,
+        "model": " ADVANCE CVT 4X2",
+        "selected": false
+      },
+      {
+        "id": 3,
+        "model": " LIMITED CVT 4X4",
+        "selected": false
+      },
+      {
+        "id": 4,
+        "model": " LUX CVT 4X2",
+        "selected": false
       }
     ],
     "images": [
       {
         "id": 0,
-        "name": "qashqai.png",
-        "alt": "Qashqai"
-      },
-      {
-        "id": 1,
-        "name": "qashqai-2.png",
-        "alt": "Qashqai"
-      },
-      {
-        "id": 2,
-        "name": "qashqai-3.png",
-        "alt": "Qashqai"
-      },
-      {
-        "id": 3,
-        "name": "qashqai-4.png",
-        "alt": "Qashqai"
-      },
-      {
-        "id": 4,
-        "name": "",
-        "alt": "Qashqai"
-      },
-      {
-        "id": 5,
-        "name": "",
+        "name": "qashqai/qashqai.png",
         "alt": "Qashqai"
       }
     ],
-    "video":"NISlnScSK_Q"
+    "video": "NISlnScSK_Q"
   },
   {
     "id": 3,
@@ -105,32 +105,32 @@
     "versions": [
       {
         "id": 0,
-        "model": "DOBLE CABINA 2WD LIMITED MT",
+        "model": "4X2 2.5 DOBLE CABINA ULTRA MT",
         "selected": true
       },
       {
         "id": 1,
-        "model": "DOBLE CABINA 2WD ULTRA LIMITED MT",
+        "model": "4X4 2.5 DOBLE CABINA SE MT",
         "selected": false
       },
       {
         "id": 2,
-        "model": "CABINA SENCILLA 4WD SE MT",
+        "model": "4X4 2.5 DOBLE CABINA LIMITED MT",
         "selected": false
       },
       {
         "id": 3,
-        "model": "DOBLE CABINA 4WD SE MT",
+        "model": "4X4 2.5 DOBLE CABINA ULTRALIMITED MT",
         "selected": false
       },
       {
         "id": 4,
-        "model": "DOBLE CABINA 4WD LIMITED MT",
+        "model": "4X4 2.5 DOBLE CABINA ULTRALIMITED AT",
         "selected": false
       },
       {
         "id": 5,
-        "model": "DOBLE CABINA 4WD ULTRA LIMITED MT",
+        "model": "4X2 2.5 DOBLE CABINA LIMITED MT",
         "selected": false
       },
       {
@@ -142,8 +142,8 @@
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "frontier/frontier.png",
+        "alt": "Frontier"
       },
       {
         "id": 1,
@@ -179,20 +179,20 @@
     "versions": [
       {
         "id": 0,
-        "model": "SALOON MT ",
+        "model": " SALOON AT ",
         "selected": true
       },
       {
         "id": 1,
-        "model": "SALOON AT ",
+        "model": " SALOON MT ",
         "selected": false
       }
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "versa/versa.png",
+        "alt": "Versa"
       },
       {
         "id": 1,
@@ -223,20 +223,35 @@
   },
   {
     "id": 5,
-    "title": "tilda",
-    "slug": "/tilda",
+    "title": "sentra",
+    "slug": "/sentra",
     "versions": [
       {
         "id": 0,
-        "model": "SALOON  SAFE MT",
+        "model": " LUX MT",
         "selected": true
+      },
+      {
+        "id": 1,
+        "model": " LUX CVT",
+        "selected": false
+      },
+      {
+        "id": 2,
+        "model": " ADVANCE CVT",
+        "selected": false
+      },
+      {
+        "id": 3,
+        "model": " LIMITED CVT",
+        "selected": false
       }
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "sentra/sentra.png",
+        "alt": "Sentra"
       },
       {
         "id": 1,
@@ -267,36 +282,35 @@
   },
   {
     "id": 6,
-    "title": "sentra",
-    "slug": "/sentra",
+    "title": "kicks",
+    "slug": "/kicks",
     "versions": [
       {
         "id": 0,
-        "model": "LUX MT",
+        "model": " LUX MT",
         "selected": true
       },
       {
         "id": 1,
-        "model": "LUX CVT",
+        "model": " ADVANCE MT",
         "selected": false
       },
       {
         "id": 2,
-        "model": "ADVANCE CVT",
+        "model": " ADVANCE CVT",
         "selected": false
       },
       {
         "id": 3,
-        "model": "LIMITED CVT",
+        "model": " LIMITED CVT ",
         "selected": false
       }
-      
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "kicks/kicks.png",
+        "alt": "Kicks"
       },
       {
         "id": 1,
@@ -327,36 +341,45 @@
   },
   {
     "id": 7,
-    "title": "kicks",
-    "slug": "/kicks",
+    "title": "x-trail",
+    "slug": "/x-trail",
     "versions": [
       {
         "id": 0,
-        "model": "LUX MT 4X2 5 PASAJEROS",
+        "model": "LUX 2.5 CVT 4X2 7 PASAJEROS",
         "selected": true
       },
       {
         "id": 1,
-        "model": "ADVANCE MT 4X2 5 PASAJEROS",
+        "model": "SUPER LUX 2.5 CVT 4X2 7 PASAJEROS",
         "selected": false
       },
       {
         "id": 2,
-        "model": "ADVANCE CVT 4X2 5 PASAJEROS",
+        "model": "LIMITED 2.5 CVT 4X4 7 PASAJEROS",
         "selected": false
       },
       {
         "id": 3,
-        "model": "LIMITED CVT 4X2 5 PASAJEROS ",
+        "model": "LUX 2.5 CVT 4X4 5 PASAJEROS",
+        "selected": false
+      },
+      {
+        "id": 4,
+        "model": "ADVANCE 2.5 CVT 4X2 7 PASAJEROS",
+        "selected": false
+      },
+      {
+        "id": 5,
+        "model": "LIMITED 2.5 CVT 4X4 7 PASAJEROS",
         "selected": false
       }
-      
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "xtrail/xtrail.png",
+        "alt": "X-Trail"
       },
       {
         "id": 1,
@@ -387,46 +410,20 @@
   },
   {
     "id": 8,
-    "title": "x-trail",
-    "slug": "/x-trail",
+    "title": "pathfinder",
+    "slug": "/pathfinder",
     "versions": [
       {
         "id": 0,
-        "model": "LUX 2.5 CVT 4X2 7 PASAJEROS",
+        "model": " LIMITED 3.5 4WD CVT",
         "selected": true
-      },
-      {
-        "id": 1,
-        "model": "LUX 2.5 CVT 4X2 5 PASAJEROS",
-        "selected": false
-      },
-      {
-        "id": 2,
-        "model": "LUX 2.5 CVT 4X2 7 PASAJEROS",
-        "selected": false
-      },
-      {
-        "id": 3,
-        "model": "LUX 2.5 CVT 4X4 5 PASAJEROS",
-        "selected": false
-      },
-      {
-        "id": 4,
-        "model": "ADVANCE 2.5 CVT 4X2 7 PASAJEROS",
-        "selected": false
-      },
-      {
-        "id": 5,
-        "model": "LIMITED 2.5 CVT 4X4 7 PASAJEROS",
-        "selected": false
       }
-      
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "pathfinder/pathfinder.png",
+        "alt": "Pathfinder"
       },
       {
         "id": 1,
@@ -457,19 +454,24 @@
   },
   {
     "id": 9,
-    "title": "pathfinder",
-    "slug": "/pathfinder",
+    "title": "murano",
+    "slug": "/murano",
     "versions": [
       {
         "id": 0,
-        "model": "LIMITED ",
+        "model": " LIMITED CVT",
+        "selected": true
+      },
+      {
+        "id": 0,
+        "model": " EXCLUSIVE CVT",
         "selected": true
       }
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
+        "name": "murano/murano.png",
         "alt": ""
       },
       {
@@ -501,20 +503,20 @@
   },
   {
     "id": 10,
-    "title": "murano",
-    "slug": "/murano",
+    "title": "patrol",
+    "slug": "/patrol",
     "versions": [
       {
         "id": 0,
-        "model": "LIMITED ",
+        "model": "LIMITED ADVANCE AT DUAL V8 5.6 L",
         "selected": true
       }
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "patrol/patrol.png",
+        "alt": "Patrol"
       },
       {
         "id": 1,
@@ -545,144 +547,40 @@
   },
   {
     "id": 11,
-    "title": "patrol",
-    "slug": "/patrol",
-    "versions": [
-      {
-        "id": 0,
-        "model": "LIMITED ADVANCE AT DUAL V8 GAS 5,7 Lts",
-        "selected": true
-      }
-    ],
-    "images": [
-      {
-        "id": 0,
-        "name": "",
-        "alt": ""
-      },
-      {
-        "id": 1,
-        "name": "",
-        "alt": ""
-      },
-      {
-        "id": 2,
-        "name": "",
-        "alt": ""
-      },
-      {
-        "id": 3,
-        "name": "",
-        "alt": ""
-      },
-      {
-        "id": 4,
-        "name": "",
-        "alt": ""
-      },
-      {
-        "id": 5,
-        "name": "",
-        "alt": ""
-      }
-    ]
-  },
-  {
-    "id": 12,
     "title": "urvan",
     "slug": "/urvan",
     "versions": [
       {
         "id": 0,
-        "model": "PANEL DX 2,5 TDI STD ROOF",
+        "model": "DX HIGH ROOF S- LONG 15 PASS",
         "selected": true
       },
       {
         "id": 1,
-        "model": "GX 2,5 TDI LONG, HI ROOF, WIDE, 15 PAS., con cabeceras",
+        "model": "DX STD ROOF 15 PASS",
         "selected": false
       },
       {
         "id": 2,
-        "model": "PANEL DX 2,5 TDI STD ROOF",
-        "selected": false
-      },
-      {
-        "id": 3,
-        "model": "DX 2,5 TDI STD ROOF, 15 PASAJEROS,  con cabeceras",
-        "selected": false
-      },
-      {
-        "id": 4,
-        "model": "DX 2,5 TDI LONG, HI ROOF, 15 PASAJEROS, con cabeceras",
-        "selected": false
-      },
-      {
-        "id": 5,
-        "model": "GX HIGH ROOF WIDE MT con aros",
-        "selected": false
-      },
-      {
-        "id": 6,
         "model": "GX HIGH ROOF WIDE AT",
         "selected": false
       },
       {
-        "id": 7,
-        "model": "GX 2,5 TDI LONG, HI ROOF, WIDE, 15 PAS., con cabeceras",
-        "selected": false
-      }
-      
-    ],
-    "images": [
-      {
-        "id": 0,
-        "name": "",
-        "alt": ""
-      },
-      {
-        "id": 1,
-        "name": "",
-        "alt": ""
-      },
-      {
-        "id": 2,
-        "name": "",
-        "alt": ""
-      },
-      {
         "id": 3,
-        "name": "",
-        "alt": ""
+        "model": "GX HIGH ROOF WIDE MT",
+        "selected": false
       },
       {
         "id": 4,
-        "name": "",
-        "alt": ""
-      },
-      {
-        "id": 5,
-        "name": "",
-        "alt": ""
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "title": "leaf",
-    "slug": "/leaf",
-    "versions": [
-      {
-        "id": 0,
-        "model": "ADVANCE Modelo 2017",
-        "selected": true
+        "model": "DX PANEL STD",
+        "selected": false
       }
     ],
     "images": [
       {
         "id": 0,
-        "name": "",
-        "alt": ""
+        "name": "urvan/urvan.png",
+        "alt": "Urvan"
       },
       {
         "id": 1,

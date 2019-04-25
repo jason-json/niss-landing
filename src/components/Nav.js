@@ -14,17 +14,32 @@ class Nav extends Component {
 
   componentWillMount() {
     let path = window.location.pathname;
-    if(path !== "/"){
+    console.log(path);
+    if (path !== "/") {
       let currentCar = CarsData.filter(car => car.slug === path);
-      let prevCar = currentCar[0].id - 1;
-      let nexCar = currentCar[0].id + 1;
+      if (currentCar.length !== 0) {
+        let prevCar = currentCar[0].id - 1;
+        let nexCar = currentCar[0].id + 1;
 
-      this.setState({
-        prevCarId: prevCar,
-        currentCarId: currentCar[0].id,
-        nextCarId: nexCar
-      });
-    } 
+        let existNext = CarsData.filter(carDataId => carDataId.id === nexCar);
+
+        if (existNext.length !== 0) {
+          this.setState({
+            prevCarId: prevCar,
+            currentCarId: currentCar[0].id,
+            nextCarId: nexCar
+          });
+        } else {
+          this.setState({
+            prevCarId: prevCar,
+            currentCarId: currentCar[0].id,
+            nextCarId: null
+          });
+        }
+      } else {
+        window.location = "../";
+      }
+    }
   }
 
   onClickNext = () => {
@@ -107,15 +122,14 @@ class Nav extends Component {
     }
   };
 
-
   getCarTitle = carId => {
     let car = CarsData.filter(carDataId => carDataId.id === carId);
-    // console.log(car);
+
     return car[0].title;
   };
   getCarSlug = carId => {
     let car = CarsData.filter(carDataId => carDataId.id === carId);
-    // console.log(car);
+
     return car[0].slug;
   };
 

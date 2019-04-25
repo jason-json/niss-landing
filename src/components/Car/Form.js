@@ -3,7 +3,7 @@ import axios from "axios";
 import { ReCaptcha } from "react-recaptcha-v3";
 import { loadReCaptcha } from "react-recaptcha-v3";
 import imgRecaptcha from "../../lib/img/icons/recaptcha_logo.png";
-
+import backArrow from "../../lib/img/icons/back-arrow.png";
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -142,7 +142,9 @@ class Form extends Component {
       <div className="popup">
         <div className="popup_wrap">
           <div className="navigation">
-            <button onClick={this.props.showHideForm}>⮪</button>
+            <button onClick={this.props.showHideForm}>
+              <img src={backArrow} alt="Atras" />
+            </button>
             <h3 className="navigation_item_popup_two">
               AGENCIA DATSUN SABANA:
               <a href="tel:+50622900505" target="_blank">
